@@ -1,0 +1,34 @@
+{% extends 'forum/zaklad.html' %}
+{% block content %}
+
+<div class="prispevek">
+	<p class="nazev_sekce">{{vlakno.nazev}}</p>
+</div>
+
+{% for p in seznam_prispevku%}
+<div class="prispevek">
+	<p class="nadpis_prispevku">{{p.autor}} | {{p.vytvoreno |date:'d-m-Y H:i'}}</p>
+	<hr class="oddelovac">
+	<p class="telo_prispevku">{{p.obsah}}</p>
+	
+</div>
+
+{% endfor %}
+
+{% if user.is_authenticated %}
+	<div class="prispevek">
+		<p class="nadpis_prispevku">Odpovědět</p>
+		<form method="post">
+			{% csrf_token %}
+			
+			{% for field in form %}
+			<div style="margin:20px;">{{field}}</div>
+			{% endfor %}
+			<input style="margin:20px;" type="submit" value="Odeslat"><br>
+			
+		</form>
+	</div>
+{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{% extends 'forum/zaklad.html' %}
+{% block content %}
+
+{% for s,v in slovnik.items%}
+
+<div class="sekce">
+	<p class="nazev_sekce">{{s.nazev}}</p>
+	<hr class="oddelovac">
+	{% for vlakno, prispevek in v.items %}
+		<div class="okenko_vlakna">
+
+			<a class="odkaz_na_vlakno" href="/vlakno/{{vlakno.pk}}">{{vlakno.nazev}}</a><br>
+			{% if prispevek %}
+
+				<p>Poslední příspěvek: {{prispevek.autor}} | {{prispevek.vytvoreno |date:'d-m-Y H:i'}}</p>
+
+			{% else %}
+				<p>Vlákno je prázdné</p>
+			{% endif %}
+
+		</div>
+		
+	{% endfor %}
+	
+</div>
+
+{% endfor %}
+
+{% endblock %}

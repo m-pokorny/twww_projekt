@@ -1,0 +1,11 @@
+{% extends 'forum/zaklad.html' %}
+
+
+{% block content %}
+  <h2>Přihlášení</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Přihlásit</button>
+  </form>
+{% endblock %}

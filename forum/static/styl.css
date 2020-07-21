@@ -1,0 +1,16 @@
+.flex-container-header{
+	display: flex;
+	height: 100px;
+    justify-content: center;
+  	align-items: center;
+}
+
+.flex-container-body{
+	display: flex;
+	background-color: blue;
+}
+
+.h1{
+	font-size: 45;
+	color: yellow;
+}

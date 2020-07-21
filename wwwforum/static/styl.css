@@ -1,0 +1,113 @@
+.kontejner_stranka{
+	display: flex;
+	flex-direction: column;
+    
+  	align-items: center;
+
+  	
+  	width: 100%;
+  	background-image: linear-gradient(to right,orange, white 25%, white 75%,orange  );
+}
+
+.header{
+	width: 70%;
+	height: 50px;
+
+	background-color: white;
+
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: gray;
+
+	text-align: right;
+
+}
+
+.kontejner_telo{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	align-items: center;
+}
+
+.sekce{
+	margin-top: 25px;
+	width: 100%;
+
+	background-color: white;
+
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: gray;
+
+}
+
+.prispevek{
+    margin-top: 25px;
+	width: 100%;
+
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: gray;
+
+}
+
+.nazev_sekce{
+	margin: 10px 2%;
+	font-size: 20pt;
+	color: gray;
+
+}
+
+.nadpis_prispevku{
+	margin-left: 2%;
+	font-size: 14pt;
+	color: gray;
+}
+
+.telo_prispevku{
+	margin-left: 3%;
+	margin-right: 3%;
+	font-size: 12pt;
+	text-align: block;
+}
+
+.odkaz_na_vlakno{
+	font-size: 14pt;
+	color: black;
+}
+
+.okenko_vlakna {
+	margin: 20px;
+	padding:  5px;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: gray;
+}
+
+.oddelovac{
+	width: 95%;
+	text-align: center;
+}
+
+
+a {
+	text-decoration: none;
+	color:black;
+}
+
+a.nadpis{
+	font-size: 60pt;
+	font-weight: bold;
+	color: orange;
+}
+
+#id_obsah{
+	width: 80%;	
+}

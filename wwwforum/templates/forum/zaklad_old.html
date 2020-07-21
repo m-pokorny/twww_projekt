@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% block title %}UTB Forum{% endblock %}</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static '/forum/styl.css' %}">
+  </head>
+ <body>
+ 	<div class="container-fluid">
+		<div class="row">
+			<div class="column">
+				<h1>UTB Forum</h1>			
+			</div>
+		</div>
+		<div class="row">
+			<div class="column-sm-1" style="background-color: grey">
+				
+			</div>
+			<div class="column-md-10">
+				{% block content %} {% endblock %}
+			</div>
+			<div class="column-sm-1" style="background-color: grey">
+			</div>
+		</div>
+	</div>
+
+  </body>
+</html>

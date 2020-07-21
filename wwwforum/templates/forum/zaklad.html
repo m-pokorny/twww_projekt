@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+
+    <title>UTB Forum</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styl.css' %}">
+  </head>
+ <body>
+  <div class="kontejner_stranka">
+    
+    <div class="header">
+      <p style="margin-right:5px;">Uživatel: 
+        {% if user.is_authenticated%}
+          {{user.username}}  |  <a href="/logout">Odhlásit</a>
+        {% else %}
+          Nepřihlášen  |  <a href="/login">Přihlásit</a>
+        {% endif %} 
+
+          | <a href="/registrace">Zaregistrovat se</a>
+      </p>
+    </div>
+
+    <a href="/" class="nadpis">UTB Forum</a>
+    
+    <div class="kontejner_telo">
+     {% block content %} {% endblock %}
+    </div>
+  </div>
+
+  </body>
+</html>
